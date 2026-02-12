@@ -7,8 +7,11 @@ Je hebt deze week geleerd over methodes, klassen en de if-statement. In deze opd
 ## Opdrachtbeschrijving
 
 In deze opdracht gaan we shoppen bij een supermarkt.
-Om dat voor elkaar te krijgen, hebben we een `SuperMarket`-klasse, een `Product`-klasse een een `Customer`-klasse nodig.
-In de `Main`-klasse gaan we naast instanties van deze klassen, ook een `Scanner`-object maken waarmee je de gebruiker vraagt welk product deze wil kopen en hoeveel.
+Om dat voor elkaar te krijgen, hebben we een `SuperMarket`-klasse en een `Product`-klasse nodig.
+In de `Main`-klasse gaan we...
+- of een `Scanner`-object maken waarmee je de gebruiker vraagt welk product deze wil kopen en hoeveel
+- of je gebruikt `IO.readln`. In dat geval kun je `Integer.parseInt(<string>)` gebruiken om een Integer te maken van de uitkomst van readline.
+
 Er moet natuurlijk ook betaald worden, dus we laten de gebruiker ook even weten wat het geheel dan wel kost.
 Als de gebruiker meer wil kopen dan wat de winkel op voorraad heeft, dan kan dat natuurlijk niet, dus dat laten we de gebruiker dan weten.
 
@@ -77,6 +80,7 @@ De name vul je in via de constructor, maar de superMarket niet.
 
 Voor superMarket maak je een `goToSuperMarket` methode met een parameter van `SuperMarket superMarket` en in de body komt `this.superMarket = superMarket`. 
 
+
 ### Stap 6
 Verder heeft Customer een `buyItem` methode. Deze is anders dan de buyItem-methode in SuperMarket. 
 
@@ -89,6 +93,8 @@ In de body schrijf je een `if-statment` met diverse `else if` branches waarin je
 __Bijvoorbeeld:__  
 - als productName gelijk is aan "bread"
 - roep dan superMarket.buyBread aan
+
+> Tip: De eerste van de if-statements moet checken of 'this.superMarket` null is. Als dat zo is, dan print je de waarschuwing "Select a supermarket to go to first" en return je de methode.
 
 ### Stap 7
 Alles komt samen in de Main klasse.  
@@ -103,9 +109,9 @@ Je mag zelf weten welke argumenten je mee geeft.
 Maak ook de volgende variabelen:
 - Supermarker supermarket
 - Customer customer
-- Scanner scanner  
+- Scanner scanner  (optioneel)
 
-Gebruik de scanner vervolgens om twee variabelen te maken:
+Gebruik de scanner of readln om twee variabelen te maken:
 - productName (als antwoord op de vraag `"Which product do you want to buy?"`)
 - amount  (als antwoord op de vraag `"How many do you want to buy?"`)
 
