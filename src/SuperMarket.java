@@ -6,9 +6,21 @@ public class SuperMarket {
 
     public SuperMarket(Product bread, Product fruit, Product toiletpaper, Product cheese) {
         this.bread = bread;
+        if (bread == null) {
+            this.bread = new Product("fake", 0, 0);
+        }
         this.fruit = fruit;
+        if (fruit == null) {
+            this.fruit = new Product("fake", 0, 0);
+        }
         this.toiletpaper = toiletpaper;
+        if (toiletpaper == null) {
+            this.toiletpaper = new Product("fake", 0, 0);
+        }
         this.cheese = cheese;
+        if (cheese == null) {
+            this.cheese = new Product("fake", 0, 0);
+        }
     }
 
     public void buyItem(Product product, int amount) {
